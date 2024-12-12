@@ -136,8 +136,8 @@ jobs:
         cd ./artifact/
         mv openwrt-x86-64-generic-squashfs-combined.img.gz OpenWrt-x64-all-$(TZ=Asia/Shanghai date "+%Y%m%d")-bios.img.gz
         mv openwrt-x86-64-generic-squashfs-combined-efi.img.gz OpenWrt-x64-all-$(TZ=Asia/Shanghai date "+%Y%m%d")-uefi.img.gz
-        md5sum OpenWrt-x64-all-$(TZ=Asia/Shanghai date "+%Y.%m.%d")-bios.img.gz > OpenWrt-x64-all-$(TZ=Asia/Shanghai date "+%Y%m%d")-bios.img.gz.md5
-        md5sum OpenWrt-x64-all-$(TZ=Asia/Shanghai date "+%Y.%m.%d")-uefi.img.gz > OpenWrt-x64-all-$(TZ=Asia/Shanghai date "+%Y%m%d")-uefi.img.gz.md5
+        md5sum OpenWrt-x64-all-$(TZ=Asia/Shanghai date "+%Y%m%d")-bios.img.gz > OpenWrt-x64-all-$(TZ=Asia/Shanghai date "+%Y%m%d")-bios.img.gz.md5
+        md5sum OpenWrt-x64-all-$(TZ=Asia/Shanghai date "+%Y%m%d")-uefi.img.gz > OpenWrt-x64-all-$(TZ=Asia/Shanghai date "+%Y%m%d")-uefi.img.gz.md5
         ls -Ahl
 
     - name: Upload firmware directory
