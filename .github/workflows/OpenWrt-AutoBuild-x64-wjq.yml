@@ -1,8 +1,8 @@
 name: OpenWrt-AutoBuild-x64-wjq
 
 on:
-#  schedule:
-#    - cron: 5 6 * * 0
+  schedule:
+    - cron: 0 2 * * 5
   workflow_dispatch:
   watch:
     types: started
