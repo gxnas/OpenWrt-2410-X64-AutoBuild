@@ -16,10 +16,8 @@ echo 'src-git istore https://github.com/linkease/istore;main' >> feeds.conf.defa
 git clone --depth 1 https://github.com/jeessy2/ddns-go  package/new/luci-app-ddns-go
 
 # luci-app-poweroff
-git clone --depth 1 https://github.com/esirplayground/luci-app-poweroff package/new/luci-app-poweroff
-
-# luci-app-poweroffdevice
-git clone --depth 1 https://github.com/sirpdboy/luci-app-poweroffdevice package/new/luci-app-poweroffdevice
+curl -fsSL  https://raw.githubusercontent.com/sirpdboy/other/master/patch/poweroff/poweroff.htm > ./feeds/luci/modules/luci-mod-admin-full/luasrc/view/admin_system/poweroff.htm 
+curl -fsSL  https://raw.githubusercontent.com/sirpdboy/other/master/patch/poweroff/system.lua > ./feeds/luci/modules/luci-mod-admin-full/luasrc/controller/admin/system.lua
 
 # luci-app-onliner
 git clone --depth 1 https://github.com/danchexiaoyang/luci-app-onliner package/new/luci-app-onliner
