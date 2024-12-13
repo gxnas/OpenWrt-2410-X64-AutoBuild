@@ -13,11 +13,26 @@ echo 'src-git istore https://github.com/linkease/istore;main' >> feeds.conf.defa
 ./scripts/feeds install -d y -p istore luci-app-store
 
 # luci-app-poweroffdevice
-git clone https://github.com/sirpdboy/luci-app-poweroffdevice package/luci-app-poweroffdevice
+git clone --depth 1 https://github.com/sirpdboy/luci-app-poweroffdevice package/new/luci-app-poweroffdevice
+
+# luci-app-poweroff
+git clone --depth 1 https://github.com/esirplayground/luci-app-poweroff package/new/luci-app-poweroff
+
+# luci-app-tailscale
+git clone --depth 1 https://github.com/asvow/luci-app-tailscale package/new/luci-app-tailscale
+
+# luci-app-onliner
+git clone --depth 1 https://github.com/danchexiaoyang/luci-app-onliner package/new/luci-app-onliner
+
+# kiddin9-packages
+src/gz openwrt_kiddin9 https://dl.openwrt.ai/latest/packages/x86_64/kiddin9
+
+echo "package/new文件夹有："
+ls -Ahl package/new
 
 echo "开始 DIY 配置……"
 echo "========================="
-build_date=$(TZ=Asia/Shanghai date "+%Y%m%d")
+build_date=$(TZ=Asia/Shanghai date "+%Y.%m.%d")
 
 # 修改主机名字，修改你喜欢的就行（不能纯数字或者使用中文）
 sed -i "/uci commit system/i\uci set system.@system[0].hostname='OpenWrt-GXNAS'" package/new/addition-trans-zh/files/zzz-default-settings
