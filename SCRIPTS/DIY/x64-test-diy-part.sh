@@ -12,17 +12,23 @@ echo 'src-git istore https://github.com/linkease/istore;main' >> feeds.conf.defa
 ./scripts/feeds update istore
 ./scripts/feeds install -d y -p istore luci-app-store
 
-# luci-app-poweroffdevice
-git clone --depth 1 https://github.com/sirpdboy/luci-app-poweroffdevice package/new/luci-app-poweroffdevice
+# luci-app-ddns-go
+git clone --depth 1 https://github.com/jeessy2/ddns-go  package/new/luci-app-ddns-go
 
 # luci-app-poweroff
 git clone --depth 1 https://github.com/esirplayground/luci-app-poweroff package/new/luci-app-poweroff
 
-# luci-app-tailscale
-git clone --depth 1 https://github.com/asvow/luci-app-tailscale package/new/luci-app-tailscale
+# luci-app-poweroffdevice
+git clone --depth 1 https://github.com/sirpdboy/luci-app-poweroffdevice package/new/luci-app-poweroffdevice
 
 # luci-app-onliner
 git clone --depth 1 https://github.com/danchexiaoyang/luci-app-onliner package/new/luci-app-onliner
+
+# luci-app-lucky
+git clone --depth 1 https://github.com/gdy666/luci-app-lucky  package/new/luci-app-lucky
+
+# luci-app-tailscale
+git clone --depth 1 https://github.com/asvow/luci-app-tailscale package/new/luci-app-tailscale
 
 # kiddin9-packages
 src/gz openwrt_kiddin9 https://dl.openwrt.ai/latest/packages/x86_64/kiddin9
