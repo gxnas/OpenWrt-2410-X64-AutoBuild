@@ -15,10 +15,6 @@ echo 'src-git istore https://github.com/linkease/istore;main' >> feeds.conf.defa
 # luci-app-ddns-go
 git clone --depth 1 https://github.com/jeessy2/ddns-go  package/new/luci-app-ddns-go
 
-# luci-app-poweroff
-curl -fsSL  https://raw.githubusercontent.com/sirpdboy/other/master/patch/poweroff/poweroff.htm > ./feeds/luci/modules/luci-mod-admin-full/luasrc/view/admin_system/poweroff.htm 
-curl -fsSL  https://raw.githubusercontent.com/sirpdboy/other/master/patch/poweroff/system.lua > ./feeds/luci/modules/luci-mod-admin-full/luasrc/controller/admin/system.lua
-
 # luci-app-onliner
 git clone --depth 1 https://github.com/danchexiaoyang/luci-app-onliner package/new/luci-app-onliner
 
@@ -30,9 +26,6 @@ git clone --depth 1 https://github.com/asvow/luci-app-tailscale package/new/luci
 
 # kiddin9-packages
 src/gz openwrt_kiddin9 https://dl.openwrt.ai/latest/packages/x86_64/kiddin9
-
-echo "package/new文件夹有："
-ls -Ahl package/new
 
 echo "开始 DIY 配置……"
 echo "========================="
