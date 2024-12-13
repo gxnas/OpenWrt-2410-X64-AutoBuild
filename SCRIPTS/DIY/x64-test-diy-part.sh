@@ -6,11 +6,8 @@
 # By: GXNAS
 #=======================================================
 
-# gxnas Packages
-git clone --depth=1 https://github.com/gxnas/OpenWrt_Build_x64_Packages package/gxnas
-echo "package/gxnas文件夹内容："
-ls -Ral package/gxnas
-echo "========================="
+# luci-app-poweroffdevice
+git clone https://github.com/sirpdboy/luci-app-poweroffdevice package/luci-app-poweroffdevice
 
 echo "开始 DIY 配置……"
 echo "========================="
