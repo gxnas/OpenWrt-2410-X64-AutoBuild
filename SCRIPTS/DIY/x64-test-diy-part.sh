@@ -6,6 +6,12 @@
 # By: GXNAS
 #=======================================================
 
+# gxnas Packages
+git clone --depth=1 https://github.com/gxnas/OpenWrt_Build_x64_Packages package/gxnas
+echo "package/gxnas文件夹内容："
+ls -Ral package/gxnas
+echo "========================="
+
 echo "开始 DIY 配置……"
 echo "========================="
 build_date=$(TZ=Asia/Shanghai date "+%Y%m%d")
