@@ -48,10 +48,10 @@ sed -i '/$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF./d' package/new/addition-trans-zh/fil
 sed -i 's/${g}.*/${a}${b}${c}${d}${e}${f}${hydrid}/g' package/new/autocore
 
 # 设置ttyd免帐号登录
-# sed -i 's/\/bin\/login/\/bin\/login -f root/' feeds/packages/utils/ttyd/files/ttyd.config
+sed -i 's/\/bin\/login/\/bin\/login -f root/' feeds/packages/utils/ttyd/files/ttyd.config
 
 # 默认 shell 为 bash
-# sed -i 's/\/bin\/ash/\/bin\/bash/g' package/base-files/files/etc/passwd
+sed -i 's/\/bin\/ash/\/bin\/bash/g' package/base-files/files/etc/passwd
 
 # samba解除root限制
 sed -i 's/invalid users = root/#&/g' feeds/packages/net/samba4/files/smb.conf.template
