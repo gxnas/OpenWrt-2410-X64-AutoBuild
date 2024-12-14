@@ -46,7 +46,7 @@ sbwfw876_repo="https://github.com/sbwml/openwrt_helloworld"
 sbw_pkg_repo="https://github.com/sbwml/openwrt_pkgs"
 natmap_repo="https://github.com/blueberry-pie-11/luci-app-natmap"
 xwrt_repo="https://github.com/QiuSimons/openwrt-natflow"
-gxnas_repo="https://github.com/gxnas/OpenWrt_Build_x64_Packages"
+#gxnas_repo="https://github.com/gxnas/OpenWrt_Build_x64_Packages"
 
 # 开始克隆仓库，并行执行
 clone_repo $openwrt_repo $latest_release openwrt &
@@ -61,7 +61,7 @@ clone_repo $openwrt_pkg_repo master openwrt_pkg_ma &
 clone_repo $openwrt_add_repo master OpenWrt-Add &
 clone_repo $dockerman_repo master dockerman &
 clone_repo $docker_lib_repo master docker_lib &
-clone_repo $gxnas_repo main gxnas_packages &
+#clone_repo $gxnas_repo main gxnas_packages &
 # 等待所有后台任务完成
 wait
 
