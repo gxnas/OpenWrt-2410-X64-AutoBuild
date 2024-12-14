@@ -7,22 +7,20 @@
 #=======================================================
 
 # luci-app-store
+#echo >> feeds.conf.default
+#echo 'src-git istore https://github.com/linkease/istore;main' >> feeds.conf.default
+#./scripts/feeds update istore
+#./scripts/feeds install -d y -p istore luci-app-store
+
 echo >> feeds.conf.default
 echo 'src-git istore https://github.com/linkease/istore;main' >> feeds.conf.default
-./scripts/feeds update istore
-./scripts/feeds install -d y -p istore luci-app-store
+echo 'src-git istore https://github.com/jeessy2/ddns-go;master' >> feeds.conf.default
+echo 'src-git istore https://github.com/danchexiaoyang/luci-app-onliner;main' >> feeds.conf.default
+echo 'src-git istore https://github.com/gdy666/luci-app-lucky;main' >> feeds.conf.default
+echo 'src-git istore https://github.com/asvow/luci-app-tailscale;main' >> feeds.conf.default
+./scripts/feeds update istore ddns-go luci-app-onliner luci-app-lucky luci-app-tailscale
+./scripts/feeds install -d y -p istore luci-app-store ddns-go luci-app-onliner luci-app-lucky luci-app-tailscale
 
-# luci-app-ddns-go
-git clone --depth 1 https://github.com/jeessy2/ddns-go  feeds/luci/applications/luci-app-ddns-go
-
-# luci-app-onliner
-git clone --depth 1 https://github.com/danchexiaoyang/luci-app-onliner feeds/luci/applications/luci-app-onliner
-
-# luci-app-lucky
-git clone --depth 1 https://github.com/gdy666/luci-app-lucky  feeds/luci/applications/luci-app-lucky
-
-# luci-app-tailscale
-git clone --depth 1 https://github.com/asvow/luci-app-tailscale feeds/luci/applications/luci-app-tailscale
 echo "开始 DIY 配置……"
 echo "========================="
 build_date=$(TZ=Asia/Shanghai date "+%Y.%m.%d")
