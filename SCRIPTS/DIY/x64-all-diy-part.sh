@@ -14,7 +14,7 @@ echo 'src-git istore https://github.com/linkease/istore;main' >> feeds.conf.defa
 
 echo "开始 DIY 配置……"
 echo "========================="
-build_date=$(TZ=Asia/Shanghai date "+%Y%m%d")
+build_date=$(TZ=Asia/Shanghai date "+%Y.%m.%d")
 
 # 修改主机名字，修改你喜欢的就行（不能纯数字或者使用中文）
 sed -i "/uci commit system/i\uci set system.@system[0].hostname='OpenWrt-GXNAS'" package/new/addition-trans-zh/files/zzz-default-settings
