@@ -18,7 +18,11 @@ echo 'src-git istore https://github.com/jeessy2/ddns-go;master' >> feeds.conf.de
 echo 'src-git istore https://github.com/danchexiaoyang/luci-app-onliner;main' >> feeds.conf.default
 echo 'src-git istore https://github.com/gdy666/luci-app-lucky;main' >> feeds.conf.default
 echo 'src-git istore https://github.com/asvow/luci-app-tailscale;main' >> feeds.conf.default
-./scripts/feeds update istore ddns-go luci-app-onliner luci-app-lucky luci-app-tailscale
+./scripts/feeds update istore
+./scripts/feeds update ddns-go
+./scripts/feeds update luci-app-onliner
+./scripts/feeds update luci-app-lucky
+./scripts/feeds update luci-app-tailscale
 ./scripts/feeds install -d y -p istore luci-app-store ddns-go luci-app-onliner luci-app-lucky luci-app-tailscale
 
 echo "开始 DIY 配置……"
