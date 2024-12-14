@@ -7,19 +7,22 @@
 #=======================================================
 
 # luci-app-store
-#echo >> feeds.conf.default
-#echo 'src-git istore https://github.com/linkease/istore;main' >> feeds.conf.default
-#./scripts/feeds update istore
-#./scripts/feeds install -d y -p istore luci-app-store
+echo >> feeds.conf.default
+echo 'src-git istore https://github.com/linkease/istore;main' >> feeds.conf.default
+./scripts/feeds update istore
+./scripts/feeds install -d y -p istore luci-app-store
 
-# Add a feed source
-#sed -i "/helloworld/d" feeds.conf.default
-#sed -i '$a src-git kenzok8 https://github.com/kenzok8/small-package' feeds.conf.default
+# luci-app-ddns-go
+git clone --depth 1 https://github.com/jeessy2/ddns-go  feeds/luci/applications/luci-app-ddns-go
 
-# Add a feed source
-sed -i "/helloworld/d" feeds.conf.default
-sed -i '$a src-git gxnas https://github.com/gxnas/OpenWrt_Build_x64_Packages' feeds.conf.default
+# luci-app-onliner
+git clone --depth 1 https://github.com/danchexiaoyang/luci-app-onliner feeds/luci/applications/luci-app-onliner
 
+# luci-app-lucky
+git clone --depth 1 https://github.com/gdy666/luci-app-lucky  feeds/luci/applications/luci-app-lucky
+
+# luci-app-tailscale
+git clone --depth 1 https://github.com/asvow/luci-app-tailscale feeds/luci/applications/luci-app-tailscale
 echo "开始 DIY 配置……"
 echo "========================="
 build_date=$(TZ=Asia/Shanghai date "+%Y.%m.%d")
