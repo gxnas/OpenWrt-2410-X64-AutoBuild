@@ -168,3 +168,41 @@ jobs:
         artifacts: ./artifact/*.*
     - name: Print Disk Space After
       run: df -h
+
+    - name: Telegram notification upload success
+      uses: appleboy/telegram-action@master
+      with:
+        to: ${{ secrets.TELEGRAM_TO }}
+        token: ${{ secrets.TELEGRAM_TOKEN }}
+        message: |
+          ♨️ 【OpenWrt-2410-x64_soot】项目编译完成 ♨️
+          - ⚽ 固件名称：OpenWrt-2410-x64_soot
+          - 🔴 固件大小：Kernel=32M，rootfs=968M
+          - 💻 平台架构: x86-64
+          - 🌻 固件源码: https://github.com/openwrt/openwrt
+          - 💝 源码分支: master
+          - 🚀 内核版本: ${{ env.latest_release }}
+          - 🎈 Lcui版本：24.10
+          - 🌐 默认地址：192.168.1.11
+          - 🔑 默认密码：无密码
+          - 🧊 更新时间：${{ env.date }}
+          https://github.com/gxnas/OpenWrt-2410-X64-AutoBuild/releases/tag/OpenWrt-2410-x64_soot
+
+    - name: Push notification upload success
+      uses: xhnmt/pushplus-action@main
+      with:
+        token: ${{ secrets.PUSH_PLUS_TOKEN }}
+        title: "OpenWrt-2410-x64_soot 项目编译完成"
+        content: |
+          ♨️ 【OpenWrt-2410-x64_soot】项目编译完成 ♨️
+          - ⚽ 固件名称：OpenWrt-2410-x64_soot
+          - 🔴 固件大小：Kernel=32M，rootfs=968M
+          - 💻 平台架构: x86-64
+          - 🌻 固件源码: https://github.com/openwrt/openwrt
+          - 💝 源码分支: master
+          - 🚀 内核版本: ${{ env.latest_release }}
+          - 🎈 Lcui版本：24.10
+          - 🌐 默认地址：192.168.1.11
+          - 🔑 默认密码：无密码
+          - 🧊 更新时间：${{ env.date }}
+          https://github.com/gxnas/OpenWrt-2410-X64-AutoBuild/releases/tag/OpenWrt-2410-x64_soot
